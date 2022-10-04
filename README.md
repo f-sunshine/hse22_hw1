@@ -1,5 +1,4 @@
-# hse22_hw1
-ДЗ1 Газизова Анита, 3 группа
+# ДЗ1 Газизова Анита, 3 группа
 1. Создаем ссылки на файлы 
 ```
 ln -s /usr/share/data-minor-bioinf/assembly/oil_R1.fastq
