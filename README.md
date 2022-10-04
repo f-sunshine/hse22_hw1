@@ -17,7 +17,7 @@ seqtk sample -s813 /oilMP_S4_L001_R2_001.fastq 1500000 > m21.fastq
 3. Используем fastQC для получения анализа чтений
 ```
 mkdir fastqc
-ls sub* matep* | xargs -tI{} fastqc -o fastqc {}
+ls sub* mp* | xargs -tI{} fastqc -o fastqc {}
 ```
 
 4. Используем multiQC для создания единого отчета по анализу
