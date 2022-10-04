@@ -49,4 +49,16 @@ multiqc -o multiqc_trimmed fastqc_trimmed
 ```
 Как результат получен файл .html с полным отчетом(картинки приложены)
 
-7. С помощью программы “platanus assemble” собираем контиги из подрезанных чтений
+7. С помощью программы “platanus assemble” собираем контиги из подрезанных чтений (согласно документации к platanus тип mate-pairs может приводить к неправильным сборкам)
+```
+platanus assemble -o Poil -f sub1.fastq.trimmed sub2.fastq.trimmed 2> assemble.log
+```
+8. С помощью программы “ platanus scaffold” собираем скаффолды из контигов, а также из подрезанных чтений
+```
+platanus scaffold -o Poil -c Poil_contig.fa -IP1 sub1.fastq.trimmed sub2.fastq.trimmed -OP2 mp1.fastq.int_trimmed mp2.fastq.int_trimmed 2> scaffold.log
+```
+9. С помощью программы “ platanus gap_close” уменьшаем кол-во гэпов с помощью подрезанных чтений
+```
+platanus gap_close -o Poil -c Poil_scaffold.fa -IP1 sub1.fastq.trimmed sub2.fastq.trimmed -OP2 mp1.fastq.int_trimmed mp2.fastq.int_trimmed 2> gapclose.log
+```
+
