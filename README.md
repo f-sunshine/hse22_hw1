@@ -27,6 +27,9 @@ mkdir multiqc
 multiqc -o multiqc fastqc
 ```
 Как результат получен файл .html с полным отчетом(скриншоты приложены)
+![image](https://user-images.githubusercontent.com/96356442/193862199-a025b2a8-2861-468c-824c-92006efbb0a1.png)
+![image](https://user-images.githubusercontent.com/96356442/193863003-2b0e8f96-67d4-4c3c-8fc8-2044e557f3a1.png)
+
 
 5. Используем platanus, чтобы обрезать чтения
 
@@ -49,6 +52,9 @@ mkdir multiqc_trimmed
 multiqc -o multiqc_trimmed fastqc_trimmed
 ```
 Как результат получен файл .html с полным отчетом(картинки приложены)
+![image](https://user-images.githubusercontent.com/96356442/193863538-29000721-d4a0-41fa-a328-704a9e8d9bb0.png)
+![image](https://user-images.githubusercontent.com/96356442/193863619-906ec286-9345-42af-858a-642fc3441465.png)
+
 
 7. С помощью программы “platanus assemble” собираем контиги из подрезанных чтений (согласно документации к platanus тип mate-pairs может приводить к неправильным сборкам)
 ```
