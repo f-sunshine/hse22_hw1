@@ -48,6 +48,8 @@ platanus_trim sub*
 platanus_internal_trim mp*
 ```
 
+После обрезания удаляем оригинальные чтения, тк они уже не нужны.
+
 6. Используем fastQC и multiQC для анализа подрезанных чтений по аналогии с пунктами 3, 4
 ```
 mkdir fastqc_trimmed
@@ -62,7 +64,7 @@ multiqc -o multiqc_trimmed fastqc_trimmed
 ![image](https://user-images.githubusercontent.com/96356442/193863538-29000721-d4a0-41fa-a328-704a9e8d9bb0.png)
 ![image](https://user-images.githubusercontent.com/96356442/193863805-c04835f0-edaa-476e-909d-4692a4834e92.png)
 
-7. С помощью программы “platanus assemble” собираем контиги из подрезанных чтений (согласно документации к platanus тип mate-pairs может приводить к неправильным сборкам)
+7. С помощью программы “platanus assemble” собираем контиги из подрезанных чтений
 ```
 platanus assemble -o Poil -f sub1.fastq.trimmed sub2.fastq.trimmed 2> assemble.log
 ```
