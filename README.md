@@ -1,4 +1,9 @@
 # ДЗ1 Газизова Анита, 3 группа
+### ссылка на Google Colab
+
+https://colab.research.google.com/drive/1W-TPaoCxBPJz3ZkIvD0z_UQoU3UOkO5P?usp=sharing
+
+### Основная часть
 >Работа с файлами(удаление, скачивание) была произведена в MobaXterm
 1. Создаем ссылки на файлы 
 ```
