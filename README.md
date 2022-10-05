@@ -31,7 +31,8 @@ ls sub* mp* | xargs -tI{} fastqc -o fastqc {}
 mkdir multiqc
 multiqc -o multiqc fastqc
 ```
-Как результат получен файл .html с полным отчетом(скриншоты приложены)
+Как результат получен файл .html с полным отчетом(файл отчета можно найти в папке all_used_files)
+
 ![image](https://user-images.githubusercontent.com/96356442/193862199-a025b2a8-2861-468c-824c-92006efbb0a1.png)
 ![image](https://user-images.githubusercontent.com/96356442/193863003-2b0e8f96-67d4-4c3c-8fc8-2044e557f3a1.png)
 
@@ -56,7 +57,8 @@ ls sub* mp*| xargs -tI{} fastqc -o fastqc_trimmed {}
 mkdir multiqc_trimmed
 multiqc -o multiqc_trimmed fastqc_trimmed
 ```
-Как результат получен файл .html с полным отчетом(картинки приложены)
+Как результат получен файл .html с полным отчетом(файл отчета можно найти в папке all_used_files)
+
 ![image](https://user-images.githubusercontent.com/96356442/193863538-29000721-d4a0-41fa-a328-704a9e8d9bb0.png)
 ![image](https://user-images.githubusercontent.com/96356442/193863805-c04835f0-edaa-476e-909d-4692a4834e92.png)
 
